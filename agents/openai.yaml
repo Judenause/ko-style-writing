@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ko Style Writing"
+  short_description: "Professor Ko-style academic prose"
+  default_prompt: "Use $ko-style-writing to revise this dissertation section in Professor Ko's preferred persuasive academic style."
