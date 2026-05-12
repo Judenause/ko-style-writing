@@ -23,11 +23,12 @@ This skill helps revise academic English into clearer, more persuasive prose. It
 
 ## Install
 
-Copy this folder into your Codex skills directory:
+Clone this repository into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R ko-style-writing ~/.codex/skills/
+cd ~/.codex/skills
+git clone https://github.com/Judenause/ko-style-writing.git
 ```
 
 The final path should be:
@@ -35,6 +36,8 @@ The final path should be:
 ```bash
 ~/.codex/skills/ko-style-writing
 ```
+
+If you already cloned it somewhere else, move or copy the folder so that the final path is still `~/.codex/skills/ko-style-writing`.
 
 ## Use
 
@@ -65,6 +68,8 @@ If a target project contains its own local writing rules, those project-local ru
 
 Recommended sharing methods:
 
-1. Push this folder to a GitHub repository
-2. Ask others to clone it and place it under `~/.codex/skills/`
-3. Keep updates in Git so everyone can pull newer revisions
+1. Share the GitHub repository URL
+2. Ask others to clone it into `~/.codex/skills/`
+3. Use `git pull` for updates
+
+If Git is not available, downloading the repository as a zip file and extracting it into `~/.codex/skills/ko-style-writing` also works.
