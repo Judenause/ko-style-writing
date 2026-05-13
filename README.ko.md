@@ -10,6 +10,7 @@
 - 문장 명확성과 explicit antecedent를 개선함
 - claim이 적절한 근거와 범위를 갖는지 점검함
 - live LaTeX 편집에서도 비교적 안전하게 동작함
+- research question 명확성, literature review synthesis, hedging, peer-review response 구조 같은 범용 academic-writing 기준을 필요한 만큼 통합함
 
 ## 하지 않는 일
 
@@ -23,6 +24,7 @@
 - `references/professor-preferences.md`
 - `references/revision-passes.md`
 - `references/model-paper-patterns.md`
+- `references/usage-examples.md`
 - `agents/openai.yaml`
 
 ## 설치 방법
@@ -57,6 +59,43 @@ Codex에서 아래처럼 호출하면 됩니다.
 $ko-style-writing Revise this introduction so it reads like a persuasive argument.
 $ko-style-writing Check this chapter for claim strength and citation gaps.
 $ko-style-writing Apply a flow pass and sentence pass to this LaTeX section.
+```
+
+## 언제 쓰면 좋은가
+
+`ko-style-writing`은 실제 research prose를 다룰 때 씁니다.
+
+- dissertation 또는 paper chapter revision
+- abstract, introduction, related work, conclusion, contribution, limitation 작성
+- 논문별 나열이 아니라 category 중심으로 묶어야 하는 literature-review synthesis
+- LaTeX 안의 citation-sensitive technical claim 점검
+- advisor, committee, defense, reviewer-facing polish
+- direct하면서 방어적으로 들리지 않는 peer-review response 작성
+
+generic academic-writing workflow는 literature-search planning, research-question design, study design, citation-manager setup처럼 넓은 연구 프로세스 조언에만 쓰는 편이 좋습니다. 실제 문장을 쓰거나 고치는 순간에는 다시 `ko-style-writing`을 쓰면 됩니다.
+
+## 자세한 호출 예시
+
+전체 예시는 `references/usage-examples.md`에 있습니다. 자주 쓰는 형태는 아래와 같습니다.
+
+```text
+[$ko-style-writing] 6. body.tex Chapter 3을 교수님 관점에서 리뷰해줘.
+수정하지 말고 흐름, 설득력, 근거 부족, committee 공격 포인트만 우선순위로 알려줘.
+```
+
+```text
+[$ko-style-writing] 6. body.tex Section 1.3을 직접 고쳐줘.
+길이는 크게 늘리지 말고, 논문 나열처럼 보이는 부분을 설득 흐름으로 바꿔줘.
+```
+
+```text
+[$ko-style-writing] related work가 paper-by-paper 나열처럼 보여.
+카테고리별로 묶고 각 카테고리의 남는 한계가 우리 방법으로 이어지게 고쳐줘.
+```
+
+```text
+[$ko-style-writing] 이 문단에서 citation이 부족하거나 overclaim인 부분만 찾아줘.
+수정안은 짧게만 제안해줘.
 ```
 
 ## 기본 revision 동작
