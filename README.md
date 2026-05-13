@@ -1,55 +1,65 @@
-# ko-style-writing
+# Ko Style Writing for Codex
 
-Professor Jong Hwan Ko-style academic writing skill for Codex.
+[한국어 README](README.ko.md)
 
-This skill helps revise academic English into clearer, more persuasive prose. It is designed for dissertation chapters, paper introductions, related work, contributions, conclusions, and citation-sensitive technical claims.
+This skill packages a persuasive academic writing workflow for Codex. It is tuned for reader-friendly English research prose, conservative claim handling, and citation-aware revision.
 
-## What It Does
+## What it does
 
-- Improves argument flow instead of only polishing sentences
-- Replaces vague pronouns with explicit nouns when needed
-- Splits long or overloaded sentences
-- Keeps claims bounded to evidence
-- Flags citation-sensitive claims
-- Preserves LaTeX notation and citation keys during direct `.tex` edits
+- revises academic prose for argument flow rather than summary-only narration
+- improves sentence clarity and explicit antecedents
+- checks whether claims are supported and appropriately scoped
+- stays safe for live LaTeX editing
+
+## What it does not do
+
+- it does not invent citations, results, datasets, or novelty claims
+- it does not justify stronger claims than the evidence supports
+- it does not replace advisor review
 
 ## Files
 
-- `SKILL.md`: main skill definition
-- `references/professor-preferences.md`: advisor-style writing rules
-- `references/revision-passes.md`: explicit revision passes
-- `references/model-paper-patterns.md`: model patterns for academic sections
-- `agents/openai.yaml`: optional display metadata
+- `SKILL.md`
+- `references/professor-preferences.md`
+- `references/revision-passes.md`
+- `references/model-paper-patterns.md`
+- `agents/openai.yaml`
 
 ## Install
 
-Clone this repository into your Codex skills directory:
+### Option 1: Clone into `~/.codex/skills`
 
 ```bash
 mkdir -p ~/.codex/skills
 cd ~/.codex/skills
-git clone https://github.com/Judenause/ko-style-writing.git
+git clone git@github.com:Judenause/ko-style-writing.git
 ```
 
-The final path should be:
+### Option 2: Clone elsewhere and symlink
 
 ```bash
-~/.codex/skills/ko-style-writing
+git clone git@github.com:Judenause/ko-style-writing.git
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/ko-style-writing" ~/.codex/skills/ko-style-writing
 ```
 
-If you already cloned it somewhere else, move or copy the folder so that the final path is still `~/.codex/skills/ko-style-writing`.
+The final installed path should be:
+
+```text
+~/.codex/skills/ko-style-writing
+```
 
 ## Use
 
 Invoke the skill by name in Codex:
 
 ```text
-$ko-style-writing Revise this introduction to make the argument clearer.
-$ko-style-writing Check this related work section for flow and citation risk.
-$ko-style-writing Edit sections/intro.tex conservatively in place.
+$ko-style-writing Revise this introduction so it reads like a persuasive argument.
+$ko-style-writing Check this chapter for claim strength and citation gaps.
+$ko-style-writing Apply a flow pass and sentence pass to this LaTeX section.
 ```
 
-## Default Revision Behavior
+## Default revision behavior
 
 If the user does not specify a pass, the skill applies:
 
@@ -58,18 +68,21 @@ If the user does not specify a pass, the skill applies:
 3. `sentence pass`
 4. `citation pass`
 
-## Project-Specific Overrides
+## Revision passes
+
+- `advisor pass`: checks persuasion quality and committee defensibility
+- `flow pass`: repairs paragraph and section logic
+- `sentence pass`: improves readability and explicitness
+- `citation pass`: audits evidence support
+- `defense pass`: tightens claim scope under scrutiny
+- `latex-safe pass`: preserves LaTeX-sensitive structures
+
+## Project-specific overrides
 
 This repository is shareable as a general academic-writing skill.
 
 If a target project contains its own local writing rules, those project-local rules may override or refine the default behavior. In the original dissertation repo, local files such as `context.md` and `writing_checklist.md` provide narrower thesis-specific constraints.
 
-## Share
+## Public note
 
-Recommended sharing methods:
-
-1. Share the GitHub repository URL
-2. Ask others to clone it into `~/.codex/skills/`
-3. Use `git pull` for updates
-
-If Git is not available, downloading the repository as a zip file and extracting it into `~/.codex/skills/ko-style-writing` also works.
+This public README intentionally omits personal-name branding. The skill is described in functional terms so it can be shared without exposing advisor identity in the repository landing page.

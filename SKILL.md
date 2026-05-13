@@ -1,6 +1,6 @@
 ---
 name: ko-style-writing
-description: Professor Jong Hwan Ko-style academic writing and revision for persuasive, reader-friendly English research prose. Use when writing or revising dissertation chapters, paper abstracts, introductions, related work, contribution paragraphs, conclusions, advisor-facing drafts, LaTeX academic prose, or citation-sensitive technical claims where the user wants clear argument flow, non-AI-like wording, unambiguous references, and evidence-backed claims.
+description: Advisor-preferred academic writing and revision for persuasive, reader-friendly English research prose. Use when writing or revising dissertation chapters, paper abstracts, introductions, related work, contribution paragraphs, conclusions, advisor-facing drafts, LaTeX academic prose, or citation-sensitive technical claims where the user wants clear argument flow, non-AI-like wording, unambiguous references, and evidence-backed claims.
 ---
 
 # Ko Style Writing
@@ -26,7 +26,7 @@ Revise academic prose as persuasive technical writing, not as a neutral list of 
    - Split long sentences, especially sentences with multiple relative clauses.
    - Keep one technical claim per sentence when the claim needs evidence.
    - Preserve precise terminology and notation from the active project.
-5. Revise for professor-preferred academic tone:
+5. Revise for advisor-preferred academic tone:
    - Avoid AI-like polish, inflated adjectives, em-dashes, and decorative transitions.
    - Prefer concrete verbs and measured claims.
    - Use hedging only when the evidence requires it.
